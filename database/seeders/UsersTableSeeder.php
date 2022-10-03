@@ -19,6 +19,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'Superadmin',
             'email' => 'superadmin@gmail.com',
             'password' => bcrypt('superadmin1234'),
+            //how can be this super user when everybody can register and have same level permissions like this one. 
         ]);
     }
 }

@@ -15,7 +15,7 @@
                     </span>
                 </h1>
             </div>
-            <div class="row py-2 bg-light m-3" v-for="category in categories">
+            <div class="row py-2 bg-light m-3" v-for="category in categories"> <!---Missing :key="" attribute-->
                 <div class="col-8">
                     <p class="fs-4 text-primary">
                         {{category.name}}

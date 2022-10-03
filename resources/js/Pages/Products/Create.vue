@@ -14,7 +14,7 @@
                     Select category:
                 </label>
                 <select class="form-control" id="selectCategory" v-model="form.category_id">
-                    <option v-for="category in categories" :value="category.id">
+                    <option v-for="category in categories" :value="category.id"> <!--missing :key="" attribute-->
                         {{ category.name }}
                     </option>
                 </select>
@@ -74,9 +74,10 @@ export default {
     methods: {
         saveImage(e) {
             console.log(e.target.files)
-            this.form.image = e.target.files
+            this.form.image = e.target.files//good
         },
         submit() {
+            //use form helper method to post.
             this.$inertia.post(route('products.store'), this.form);
         }
     }

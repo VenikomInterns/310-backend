@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!--This will result to raw json-->
         {{category}}
     </div>
 </template>

@@ -13,7 +13,8 @@
                         </Link>
                     </span>
             </h1>
-            <div class="row py-2 bg-light m-3" v-for="product in products">
+            <!--We are not showing the image-->
+            <div class="row py-2 bg-light m-3" v-for="product in products"> <!--Missing :key="" attribute-->
                 <div class="col-12 col-xl-6">
                     <p class="fs-4 text-secondary">
                         {{ product.name }} / <span class="text-primary">{{ getCategoryName(product) }}</span>
@@ -60,7 +61,7 @@ export default {
         return {}
     },
     methods: {
-        getCategoryName(category) {
+        getCategoryName(category) {// nice but its much easier to load it on backend
             for (let i = 0; i <= this.categories.length; i++) {
                 if (category.category_id === this.categories[i].id)
                     return this.categories[i].name;

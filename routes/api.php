@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::apiResource('categories', CategoryApiController::class)->only('index', 'show');
 Route::apiResource('products', ProductApiController::class)->only('index', 'show');
+//excellent

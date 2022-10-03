@@ -59,6 +59,7 @@ export default {
     },
     data() {
         return {
+            //why not: form: this.$inertia.form({...this.product})
             form: this.$inertia.form({
                 name: this.product.name,
                 price: this.product.price,
