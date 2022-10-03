@@ -44,7 +44,7 @@ class ProductController extends Controller
         $allImages = ''; 
         for($i = 0; $i < $length; $i++) {
             $newImageName = time() . '-' . $request->name . '-' . $i . '.' . $request->image[$i]->extension();// nice
-            $request->image[$i]->move(public_path('images'), $newImageName); //nice
+            $request->image[$i]->move(public_path('images'), $newImageName); //we should never save to public path because its not git ignorred. We need to save to storage.
             $allImages = $allImages . $newImageName . ', '; //nice
         }
 
